@@ -1,0 +1,52 @@
+/* Fondo oscuro general igual a la maqueta */
+.bg-dark-custom {
+    background-color: #1e2126;
+}
+
+/* Fondo de las tarjetas y del modal */
+.bg-card-custom {
+    background-color: #2b2f36;
+}
+
+.card-personaje {
+    background-color: #2b2f36;
+    border: 1px solid #383d46;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-personaje:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Punto de color para el estado */
+.punto-estado {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.estado-alive {
+    background-color: #55cc44; /* Verde */
+}
+
+.estado-dead {
+    background-color: #d63d2e; /* Rojo */
+}
+
+.estado-unknown {
+    background-color: #9e9e9e; /* Gris */
+}
+
+/* Tabla dentro del modal */
+.tabla-detalle {
+    --bs-table-bg: transparent;
+}
+
+.w-40 {
+    width: 40%;
+}

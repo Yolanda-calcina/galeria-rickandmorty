@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personajes de Rick and Morty</title>
+    <!-- Bootstrap 5 CSS por CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tus estilos propios (ruta relativa) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark-custom text-light">
+
+    <div class="container py-5">
+        <!-- Título principal -->
+        <h1 class="text-center fw-bold mb-4">Personajes de Rick and Morty</h1>
+
+        <!-- Mensaje de error (oculto por defecto) -->
+        <div id="mensaje-error" class="alert alert-danger text-center d-none" role="alert"></div>
+
+        <!-- Cuadrícula de personajes (4 columnas en PC, 2 en tablet, 1 en celular) -->
+        <div id="contenedor-personajes" class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <!-- Aquí JavaScript insertará las tarjetas -->
+        </div>
+
+        <!-- Paginación -->
+        <div class="d-flex justify-content-center align-items-center gap-3 mt-5">
+            <button id="btn-anterior" class="btn btn-secondary" disabled>« Anterior</button>
+            <span id="info-pagina" class="text-secondary fw-semibold">Página 1 de 42</span>
+            <button id="btn-siguiente" class="btn btn-primary">Siguiente »</button>
+        </div>
+    </div>
+
+    <!-- VENTANA MODAL DE DETALLE (Imagen 3) -->
+    <div class="modal fade" id="modalDetalle" tabindex="-1" aria-labelledby="modalTitulo" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-card-custom border-secondary">
+                
+                <!-- Encabezado del Modal -->
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title fw-bold fs-4" id="modalTitulo">Nombre del Personaje</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+
+                <!-- Cuerpo del Modal -->
+                <div class="modal-body">
+                    <div class="row align-items-center g-4">
+                        <!-- Columna izquierda: Imagen -->
+                        <div class="col-md-5 text-center">
+                            <img id="modalImagen" src="" alt="Imagen personaje" class="img-fluid rounded shadow">
+                        </div>
+
+                        <!-- Columna derecha: Tabla de datos -->
+                        <div class="col-md-7">
+                            <table class="table table-dark table-borderless mb-0 tabla-detalle">
+                                <tbody>
+                                    <tr class="border-bottom border-secondary-subtle">
+                                        <th class="text-secondary fw-normal w-40">ID</th>
+                                        <td id="modalId"></td>
+                                    </tr>
+                                    <tr class="border-bottom border-secondary-subtle">
+                                        <th class="text-secondary fw-normal">Estado</th>
+                                        <td id="modalEstado"></td>
+                                    </tr>
+                                    <tr class="border-bottom border-secondary-subtle">
+                                        <th class="text-secondary fw-normal">Especie</th>
+                                        <td id="modalEspecie"></td>
+                                    </tr>
+                                    <tr class="border-bottom border-secondary-subtle">
+                                        <th class="text-secondary fw-normal">Género</th>
+                                        <td id="modalGenero"></td>
+                                    </tr>
+                                    <tr class="border-bottom border-secondary-subtle">
+                                        <th class="text-secondary fw-normal">Tipo</th>
+                                        <td id="modalTipo"></td>
+                                    </tr>
+                                    <tr class="border-bottom border-secondary-subtle">
+                                        <th class="text-secondary fw-normal">Origen</th>
+                                        <td id="modalOrigen"></td>
+                                    </tr>
+                                    <tr class="border-bottom border-secondary-subtle">
+                                        <th class="text-secondary fw-normal">Última ubicación</th>
+                                        <td id="modalUbicacion"></td>
+                                    </tr>
+                                    <tr class="border-bottom border-secondary-subtle">
+                                        <th class="text-secondary fw-normal">Episodios</th>
+                                        <td id="modalEpisodios"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-secondary fw-normal">Creado</th>
+                                        <td id="modalCreado"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pie del Modal -->
+                <div class="modal-footer border-secondary">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle por CDN (necesario para que funcione el Modal) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Tu archivo JavaScript (ruta relativa) -->
+    <script src="app.js"></script>
+</body>
+</html>
