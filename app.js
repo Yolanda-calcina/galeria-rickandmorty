@@ -75,7 +75,7 @@ function mostrarTarjetas(personajes) {
                     <p class="card-text small mb-3">${personaje.location.name}</p>
                     
                     <!-- mt-auto empuja el botón hasta el final para que todos queden alineados -->
-                    <button class="btn btn-primary w-100 mt-auto" onclick="verDetalle(${personaje.id})">
+                    <button class="btn btn-success w-100 mt-auto" onclick="verDetalle(${personaje.id})">
                         Detalle
                     </button>
                 </div>
